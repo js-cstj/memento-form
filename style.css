@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap");
+html {
+  height: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 9pt;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+@media screen {
+  body {
+    background-color: black;
+    color: white;
+  }
+}
+
+.page {
+  width: 8.5in;
+  height: 11in;
+  padding: .5in;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  background-color: white;
+  color: black;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+}
+
+.page header {
+  border-bottom: 1px solid black;
+  -webkit-box-ordinal-group: -999;
+      -ms-flex-order: -1000;
+          order: -1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.page footer {
+  border-top: 1px solid black;
+  -webkit-box-ordinal-group: 1001;
+      -ms-flex-order: 1000;
+          order: 1000;
+}
+
+@media screen {
+  .page {
+    margin: 1em auto;
+  }
+}
+
+h2 {
+  margin: 1.5em 0 .5em;
+}
+
+code {
+  font-family: 'Roboto Slab', serif;
+}
+
+ul.balises, ul.typeinput {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: dense;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: .25em;
+}
+
+ul.balises samp, ul.typeinput samp {
+  font-family: 'Roboto Slab', serif;
+  display: block;
+  background-color: #e6e6e6;
+  padding: 0 .25em;
+}
+
+ul.balises samp img, ul.typeinput samp img {
+  height: 1em;
+  float: right;
+  margin-top: .15em;
+}
+
+ul.balises li, ul.typeinput li {
+  border: 1px solid black;
+  padding: .25em;
+}
+
+ul.balises p, ul.typeinput p {
+  margin: 0;
+}
+
+ul.typeinput {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+ul.attribut {
+  -webkit-columns: 3;
+          columns: 3;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  -webkit-column-rule: 1px dotted black;
+          column-rule: 1px dotted black;
+}
+
+ul.attribut li {
+  margin: .25em 0;
+}
+
+ul.attribut samp {
+  font-family: 'Roboto Slab', serif;
+  background-color: #e6e6e6;
+  padding: 0 .5em;
+}
+/*# sourceMappingURL=style.css.map */

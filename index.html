@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <header><span>Memento</span><span>Les formulaires</span></header>
+        <footer>&copy; Web 3 : dynamique</footer>
+        <div class="body"> 
+            <h1>Les formulaires</h1>
+            <p>Attention : cette liste n'est pas exhaustive. Elle ne contient que les éléments nécessaires au cours.</p>
+            <h2>Les balises</h2>
+            <ul class="balises">
+                <li>
+                    <samp>&lt;form action="" onsubmit="return false;"&gt;…&lt;/form&gt;</samp>
+                    <p>Enveloppe la totalité des éléments de formulaire</p>
+                </li>
+                <li>
+                	<samp>&lt;input type="…" name="…" id="…" /&gt;</samp>
+                	<p>Champ de formulaire dont l'allure et l'utilisation dépendent de son <code>type</code>. Voir plus bas.</p>
+                </li>
+                <li>
+                	<samp>&lt;select name="…" id="…"&gt;…&lt;/select&gt;<img src="images/select.png" alt="Menu déroulant"></samp>
+                	<p>Liste déroulante ou menu déroulant. </p>
+                </li>
+                <li>
+                	<samp>&lt;option value="…"&gt;…&lt;/option&gt;</samp>
+                	<p>Élément de menu déroulant. Doit être placé dans un <code>select</code>.</p>
+                </li>
+                <li>
+                	<samp>&lt;textarea name="…" id="…" cols="30" rows="10"&gt;…&lt;/textarea&gt;</samp>
+                	<p><img src="images/textarea.png" alt="Textarea" style="float: right; height:2em;margin-top:.25em;">Champ de texte pouvant contenir des sauts de ligne.</p>
+                </li>
+                <li>
+                    <samp>&lt;button type="…" id="…"&gt;…&lt;/button&gt;<img src="images/button.png" alt="Bouton"></samp>
+                    <p>Un bouton dont le comportement est déterminé par la valeur de <code>type</code>. Les valeurs possibles sont <code>button</code>, <code>submit</code> et <code>reset</code>.</p>
+                </li>
+                <li>
+                	<samp>&lt;label for="…"&gt;…&lt;/label&gt;</samp>
+                	<p>Étiquette apposée au champ ayant le <code>id</code> correspondant à la valeur du <code>for</code>.</p>
+                </li>
+                <li>
+                	<samp>&lt;fieldset&gt;…&lt;/fieldset&gt;</samp>
+                	<p>Permet de regrouper des champs. Est particulièrement pratique pour les boutons radio et les cases à cocher</p>
+                </li>
+            </ul>
+            <p>Une attention particulière doit être portée sur les attributs name et id des champs de formulaires.</p>
+            <h2>Les types de input</h2>
+            <ul class="typeinput">
+            	<li>
+            		<samp>text <img src="images/text.png" alt="Champ de type text"/></samp>
+            		<p>Un champ de texte ordinaire</p>
+            	</li>
+            	<li>
+            		<samp>password <img src="images/password.png" alt="Champ mot de passe"/></samp>
+            		<p>Un champ mot de passe. N'affiche pas le contenu.</p>
+            	</li>
+            	<li>
+            		<samp>radio <img src="images/radio.png" alt="Nombre"/></samp>
+            		<p>Une case à cocher. Deux boutons radio ayant le même <code>name</code> ne peuvent être cochés en même temps.</p>
+            	</li>
+            	<li>
+            		<samp>checkbox <img src="images/checkbox.png" alt="Nombre"/></samp>
+            		<p>Une case à cocher.</p>
+            	</li>
+            	<li>
+            		<samp>number <img src="images/number.png" alt="Nombre"/></samp>
+            		<p>Un champ qui n'accepte que des nombres.</p>
+            	</li>
+            	<li>
+            		<samp>range <img src="images/range.png" alt="Glissière"/></samp>
+            		<p>Une glissière pour choisir un nombre.</p>
+            	</li>
+            	<li>
+            		<samp>email, tel, url <img src="images/email.png" alt=""/></samp>
+            		<p>Un champ de texte qui effectue une validation particulière.</p>
+            	</li>
+            	<li>
+            		<samp>date <img src="images/date.png" alt="Date"/></samp>
+            		<p>Un champ qui demande une date. Affiche un calendrier.</p>
+            	</li>
+            	<li>
+            		<samp>color <img src="images/color.png" alt="Couleur"/></samp>
+            		<p>Un champ qui demande une couleur. Affiche une palette de couleurs.</p>
+            	</li>
+            </ul>
+            <h2>Les attributs du input</h2>
+            <ul class="attribut">
+                <li><samp>type</samp> Détermine le comportement du <code>input</code>.</li>
+                <li><samp>name¹</samp> Très important. Il s'agit de l'identification que l'on utilisera pour accéder au champ.</li>
+                <li><samp>id¹</samp> Peut également être utilisé pour accéder au champ.</li>
+                <li><samp>value</samp> Pour un champ textuel, la valeur par défaut dans le champ. Pour une coche, la valeur envoyée lorsqu'elle est cochée.</li>
+                <li><samp>readonly¹</samp> Empêche la modification du champ par l'usager.</li>
+                <li><samp>disabled¹</samp> Empêche la modification et la sélection du champ par l'usager.</li>
+                <li><samp>min</samp>, <samp>max</samp>, <samp>step</samp> Pour les champs <code>number</code> et <code>range</code> : détermine le minimum, le maximum et l'incrémentation du champ.</li>
+                <li><samp>checked</samp> Pour les champs <code>radio</code> et <code>checkbox</code>. Détermine si la coche est cochée par défaut.</li>
+                <li><samp>required</samp> Indique que le champ doit avoir une valeur sinon le formulaire ne sera pas valide.</li>
+                <li><samp>pattern</samp> Permet de valider le contenu textuel du champ.</li>
+                <li><samp>placeholder</samp> Affiche le texte donné en grisé dans le champ.</li>
+                <li><samp>minlength</samp>, <samp>maxlength</samp> Détermine la longueur minimum et maximum du contenu du champ.</li>
+            </ul>
+            <p>¹ Est également utilisé dans <code>select</code> et <code>textarea</code>.</p>
+        </div>
+    </div>
+</body>
+</html>
